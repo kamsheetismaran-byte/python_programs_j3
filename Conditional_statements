@@ -1,0 +1,289 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "3385e057-ea01-47f5-a3b3-8f4fed91c81a",
+   "metadata": {},
+   "source": [
+    "# conditional statements in python\n",
+    "1. python have 4 types of conditional statements\n",
+    "2. `if` statement\n",
+    "3. `elif` statement\n",
+    "4. `else` statement\n",
+    "5. `nested` statement\n",
+    "\n",
+    "```python - if\n",
+    "if (condition): #if condition True inside statements are running \n",
+    "    statement1\n",
+    "    statement2...n\n",
+    "```\n",
+    "```python - if,else\n",
+    "else: #if condition Fails its went to else statement and print inside statements \n",
+    "    statement1\n",
+    "    statement2...n\n",
+    "```\n",
+    "```python - if,else,elif\n",
+    "if (condition):\n",
+    "    statements\n",
+    "elif (condition):\n",
+    "    statements\n",
+    "elif (condition):\n",
+    "    statements\n",
+    "else: \n",
+    "    statements\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "aa0be30f-ab7f-453c-bfe3-f8062d56b42f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter number here: 78\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "78 is even number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# write a program to find the given is number?\n",
+    "number=int(input(\"enter number here:\"))\n",
+    "if (number%2 == 0):\n",
+    "    print(number,\"is even number\") \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "169b20f7-bcb4-4f18-8486-aa6928ecb000",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please enter number here: 78\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "78 is zero\n"
+     ]
+    }
+   ],
+   "source": [
+    "#write a program to find the given number is positive or zero?\n",
+    "n = int(input(\"please enter number here:\"))\n",
+    "if(n<0):\n",
+    "    print(n,\"is negitive number\")\n",
+    "else:\n",
+    "    print(n,\"is zero\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "0eb700b8-7a86-4dd0-a576-2cb9df30938f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please enter number here: 0\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 is zero\n"
+     ]
+    }
+   ],
+   "source": [
+    "# write a program to find the given number or number?\n",
+    "n = int(input(\"please enter number here:\"))\n",
+    "if (num%2 == 1):\n",
+    "    print(num,\"is odd number\")\n",
+    "else:\n",
+    "    print(num,\"is zero\") "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "c971f0c8-a81a-468d-bd10-70f18d2d6f3a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter first number here: 45\n",
+      "enter second number here: 76\n",
+      "enter third number here: 67\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "76 is largest number\n"
+     ]
+    }
+   ],
+   "source": [
+    "#write a program to find the largest number from three number ?\n",
+    "v1 = int(input(\"enter first number here:\"))\n",
+    "v2 = int(input(\"enter second number here:\"))\n",
+    "v3= int(input(\"enter third number here:\")) \n",
+    "if (v1>=v2 and v2>=v3):\n",
+    "    print(v2>=v1,\"is largest number\")\n",
+    "elif(v2>=v1 and v2>=v3):\n",
+    "    print(v2,\"is largest number\")\n",
+    "else:\n",
+    "    print(v3,\"is the largest number\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "bf9fe272-8016-4ab1-a63e-5d1aff6386c6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter students marks here: 123\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "please enter corrent marks\n"
+     ]
+    }
+   ],
+   "source": [
+    "\"\"\"\n",
+    "write a program to find the grades based on student marks\n",
+    "1. if marks in between 80 to 100 - A Grade\n",
+    "2. if marks in between 60 to 79 - B Grade\n",
+    "3. if marks in between 40 to 59 - C Grade\n",
+    "4. if marks in between 25 to 39 - D Grade\n",
+    "5. if marks in between 0  to 24- Fail Grade\n",
+    "6. if other than above marks output is - please enter correct marks\n",
+    "\"\"\"\n",
+    "marks = int(input(\"enter students marks here:\"))\n",
+    "if (marks>=80 and marks<100):\n",
+    " print(marks,\"A Grade\")\n",
+    "elif (marks>=60 and marks<=79):\n",
+    "    print(marks,\"C Grade\")\n",
+    "elif (marks>=40 and marks<=59):\n",
+    "    print(marks,\"D Grade\")\n",
+    "elif (marks>=25 and marks<=39):\n",
+    "    print(marks,\"D Grade\")\n",
+    "elif (marks>=0 and marks<=24):\n",
+    "    print(marks,\"is Fail\")\n",
+    "else:\n",
+    "    print(\"please enter corrent marks\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "19f6386d-0035-41fc-9227-c04c950df11d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please username here: siva@123\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "username is valid\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please enter password here: sivaji@12345\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "user crednetilas successfully valid\n"
+     ]
+    }
+   ],
+   "source": [
+    "#write a program to valid login credentials conditional staments\n",
+    "username=str(input(\"please username here:\"))\n",
+    "if (username==\"siva@123\"):\n",
+    "    print(\"username is valid\")\n",
+    "    password=str(input(\"please enter password here:\"))\n",
+    "    if (password==\"sivaji@12345\"):\n",
+    "        print(\"user crednetilas successfully valid\")\n",
+    "    else:\n",
+    "        print(\"password is invalid\")\n",
+    "else:\n",
+    "    print(\"username is in valid\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e7782962-afbe-42be-ae18-f69c5fe4d454",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
